@@ -1,5 +1,5 @@
 const onSubmit = () => {
-	const URL = 'http://localhost:4000/upload'
+	const URL = process.env.URL
 	var input = document.querySelector('input[type="file"]')
 	var output = document.getElementById('img-out')
 	let formData = new FormData();
@@ -11,7 +11,7 @@ const onSubmit = () => {
 	output.src = window.URL.createObjectURL(input.files[0])
 	output.style.display = "block"
 
-	fetch('http://localhost:4000/upload', {
+	fetch(URL, {
 	  method: 'POST',
 	  body: formData
 	})
