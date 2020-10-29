@@ -1,5 +1,5 @@
 const onSubmit = () => {
-	const URL-backend = "btp-backend.vercel.app"
+	const backend = "btp-backend.vercel.app"
 	var input = document.querySelector('input[type="file"]')
 	var output = document.getElementById('img-out')
 	let formData = new FormData();
@@ -11,7 +11,7 @@ const onSubmit = () => {
 	output.src = window.URL.createObjectURL(input.files[0])
 	output.style.display = "block"
 
-	fetch(URL-backend, {
+	fetch(backend, {
 	  method: 'POST',
 	  body: formData
 	})
