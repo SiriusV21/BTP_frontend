@@ -1,5 +1,5 @@
 const onSubmit = () => {
-	const backend = "https://btp-backend.vercel.app/"
+	const backend = "https://btp-backend.vercel.app/upload"
 	var input = document.querySelector('input[type="file"]')
 	var output = document.getElementById('img-out')
 	let formData = new FormData();
